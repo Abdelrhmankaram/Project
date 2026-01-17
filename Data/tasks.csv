@@ -1,15 +1,15 @@
 Task ID,Title,Description,Priority,Status,Date Created,Due Date,Owner
-0,Setup Database,Initialize database schema,High,Open,2026-01-01,2026-01-05,30309201401390
-2,UI Design,Design dashboard interface,Medium,Open,2026-01-03,2026-01-12,30309201401392
-3,Authentication,Implement login and JWT auth,High,Completed,2025-12-28,2026-01-03,30309201401393
+0,Setup Database,Initialize database schema,High,Open,2026-01-01,2026-01-05,30309201401394
+1,API Development,Develop REST API for tasks,High,In Progress,2026-01-02,2026-01-10,30309201401394
+2,UI Desig,Design dashboard interfac,Mediu,Open,2026-01-03,2026-01-17,30309201401394
+3,Authentication,Implement login and JWT auth,High,Completed,2025-12-28,2026-01-03,30309201401394
 4,Unit Testing,Write unit tests,Medium,Pending,2026-01-04,2026-01-15,30309201401394
-5,Deployment,Deploy app to production,Low,Pending,2026-01-05,2026-01-20,30309201401395
-6,Bug Fixing,Fix reported bugs,High,In Progress,2026-01-06,2026-01-09,30309201401396
-7,Code Review,Review pull requests,Medium,Open,2026-01-06,2026-01-08,30309201401397
-8,Documentation,Write project documentation,Low,Open,2026-01-07,2026-01-18,30309201401398
-9,Performance Optimization,Optimize database queries,High,Pending,2026-01-08,2026-01-14,30309201401399
-10,Logging System,Implement centralized logging,Medium,In Progress,2026-01-09,2026-01-16,30309201401400
-11,Notification Service,Email and in-app notifications,Low,Open,2026-01-10,2026-01-22,30309201401401
-12,Role Management,Add roles and permissions,High,Open,2026-01-11,2026-01-19,30309201401402
-13,Backup Strategy,Setup automated backups,Medium,Pending,2026-01-12,2026-01-25,30309201401403
-14,Security Audit,Run security vulnerability scan,High,Open,2026-01-13,2026-01-18,30309201401404
+6,Bug Fixing,Fix reported bugs,High,In Progress,2026-01-06,2026-01-09,30309201401394
+7,Code Review,Review pull requests,Medium,Open,2026-01-06,2026-01-08,30309201401394
+8,Documentation,Write project documentation,Low,Open,2026-01-07,2026-01-18,30309201401394
+9,Performance Optimization,Optimize database queries,High,Pending,2026-01-08,2026-01-14,30309201401394
+10,Logging System,Implement centralized logging,Medium,In Progress,2026-01-09,2026-01-16,30309201401394
+11,Notification Service,Email and in-app notifications,Low,Open,2026-01-10,2026-01-22,30309201401394
+12,Role Management,Add roles and permissions,High,Open,2026-01-11,2026-01-19,30309201401394
+13,Backup Strategy,Setup automated backups,Medium,Pending,2026-01-12,2026-01-25,30309201401394
+14,Security Audit,Run security vulnerability scan,High,Open,2026-01-13,2026-01-18,30309201401394

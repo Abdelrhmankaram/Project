@@ -1,22 +1,18 @@
-# import inquirer
-
-# name = inquirer.List(
-#     name="name",
-#     message="hello?",
-#     choices=[
-#         "world",
-#         "wrold",
-#         "woorld"
-#     ]
-# )
-
-# if list(inquirer.prompt([name]).values())[0] == "world":
-#     print("Correct choice")
-# else:
-#     print("Incorrect choice")
-
+import inquirer
+from Data_Operations import *
+from Hashing import *
+from Task import *
 from User import *
+from Flow import Login, Signup
 
-a = Admin("30309201401394", "Abdelrahman", "Karam", "abdelrhmankaram171@gmail.com", "password", "01224386240")
+while True:
+    session = inquirer.prompt([inquirer.List(
+        name="Log in or Sign up",
+        message="Welcome to your To-Do List Application!!",
+        choices=["Login", "Sign Up"]
+    )])
 
-print(Admin_operations.view_all_users())
+    if list(session.values())[0] == "Login":
+        Login()
+    else:
+        Signup()

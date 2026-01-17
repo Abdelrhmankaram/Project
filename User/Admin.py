@@ -18,10 +18,16 @@ class Admin_operations:
     def delete_task(id):
         return Task_Operations.delete_task(id)
     
-    def deactivate_account(id):
+    def Activate_deactivate_account(id):
         data = read_users_data()
+
         idx = data.index[data["ID"] == id][0]
 
-        data.at[idx, "Status"] = "Not Active"
-        
+        print(idx)
+
+        if data.at[idx, "Status"] == "Active":
+            data.at[idx, "Status"] = "Not Active"
+        else:
+            data.at[idx, "Status"] = "Active"
+            
         save_users_data(data)

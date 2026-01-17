@@ -1,4 +1,7 @@
 def read_users_data():
+    """
+    Docstring for read_users_data
+    """
     import pandas as pd
     data = pd.read_csv("Data/users.csv")
 

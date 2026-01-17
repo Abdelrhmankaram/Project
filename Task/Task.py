@@ -1,15 +1,34 @@
 from Data_Operations import *
+from datetime import date
+import pandas as pd
 
 class Task:
-    def __init__(self, title, description, priority, status, date_created, due_date, owner):
+    def __init__(self, title, description, priority, status, due_date, owner):
         self.task_id = Task_Operations.get_next_id()
         self.title = title
         self.description = description
         self.priority = priority
         self.status = status
-        self.date_created = date_created
+        self.date_created = date.today()
         self.due_date = due_date
         self.owner = owner
+    
+    def save_task(self):
+        data = read_tasks_data()
+        new_row = pd.DataFrame([{
+            "Task ID": self.task_id,
+            "Title": self.title,
+            "Description": self.description,
+            "Priority": self.priority,
+            "Date Created": self.date_created,
+            "Due Date": self.due_date,
+            "Owner": self.owner
+        }])
+        
+        data = pd.concat([data, new_row], ignore_index=True)
+
+        save_tasks_data(data)
+
 
 
 class Task_Operations:
@@ -96,3 +115,15 @@ class Task_Operations:
         """
         data = read_tasks_data()
         return int(data.tail(1)['Task ID'].iloc[0]) + 1
+    
+    @staticmethod
+    def modify_Task(task_id, title, desc, prio, date):
+        data = read_tasks_data()
+        idx = data.index[data["Task ID"] == task_id][0]
+
+        data.at[idx, "Title"] = title
+        data.at[idx, "Description"] = desc
+        data.at[idx, "Priority"] = prio
+        data.at[idx, "Due Date"] = date
+
+        save_tasks_data(data)
